@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Week1/css/animation.css">
+    <link rel="stylesheet" href="../Week1/css/game.css">
+    <link rel="stylesheet" href="../Week1/css/video.css">
+    <title>Login</title>
+</head>
+<body>
+        <!-- <audio autoplay loop>
+                <source src="" type="audio/ogg">
+                <source src="/mp3file/Black Desert Online OST - Title Screen (Remaster).mp3" type="audio/mpeg">
+        </audio> -->
+
+        <div id="targetElement">
+                <h1 class="fade-in-Text">Pearl Abyss</h1>
+
+                <div class="id">
+                    <form action="../Week1/gamescreen.html" method="post" id="form" class="form">
+                            <div>
+                                <label class="fade-in-Text" for="username">Enter Username</label>
+                                <input type="text" required maxlength="10" id="TRAVELER" name="TRAVELER" placeholder="username">
+                            </div>
+                            <br>
+                            <div class="btn_wrap">
+                                    <div class="floatingBanner">
+                                        <button type="submit" class="main_btn aqua">Play</button>
+                                    </div>
+                            </div>
+                    </form>
+                </div>
+
+                <script> 
+                    const form = document.querySelector("#form");
+
+                    form.addEventListener("submit", function (event) {
+                        // stop form submission
+                        event.preventDefault();
+
+                        const TRAVELER = document.getElementById("TRAVELER").value;
+
+                        console.log(TRAVELER);
+
+                        localStorage.setItem("TRAVELER",TRAVELER);
+
+                        window.location.href = '../Week1/gamescreen.html';
+                    });    
+                </script>
+        </div>
+</body>
+</html>

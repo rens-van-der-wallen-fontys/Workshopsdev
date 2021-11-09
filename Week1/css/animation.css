@@ -1,0 +1,256 @@
+    /* fade text */
+    .fade-in-Text {
+        z-index: 20;
+        opacity: 0;
+        color: #b88017;
+        animation: fadeIn linear 5s;
+
+        opacity: 1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .fade-out-Text {
+      animation: fadeOut linear 2s 5s;
+    }
+    
+    * {
+      font-family: 'StrongSword_Pure', customKR;
+      color: #b88017;
+  }
+
+      #cf {
+        position: relative;
+        height:100%;
+        width:100%;
+        left: 0;
+        top: 0;
+        margin:0;
+        padding: 0;
+      }
+      
+      .Introgif {
+        position: absolute;
+        opacity: 0;
+        left: 36%;
+        top: 200px;
+
+        animation-name: fadeIntro;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+      }
+
+      .WelcomeText {
+        z-index: 20;
+        position: absolute;
+        left: 46%;
+        top: 100px;
+        font-size: 30;
+
+        opacity: 0;
+
+        color: #b88017;
+        animation-name: fadeInOutText;
+        animation-duration: 7s;
+        animation-delay: 6s;
+        animation-timing-function: linear;
+    }
+
+      .FirstGif {
+        position: absolute;
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+
+        animation-name: fadeFirstGif;
+        animation-duration: 10s;
+        animation-delay: 11s;
+        animation-timing-function: linear;
+      }
+
+      .SecondGif {
+        position: absolute;
+        z-index: 2;
+        height: auto;
+        width: 100vw;
+        margin: 0;
+        padding: 0;   
+        opacity: 0;
+
+        animation-name: fadeSecondGif ;
+        animation-duration: 20s;
+        animation-delay: 20s;
+        animation-timing-function: linear;
+      }
+     
+      .Text1 {
+        z-index: 20;
+        position: absolute;
+        left: 43%;
+        top: 100px;
+
+        opacity: 0;
+
+        color: #b88017;
+        animation-name: fadeInOutText;
+        animation-duration: 8s;
+        animation-delay: 13s;
+        animation-timing-function: linear;
+      }
+
+      .Text2 {
+        z-index: 20;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        left: 130%;
+        top: 10px;
+        max-height: 20px;
+
+        opacity: 0;
+
+        color: black;
+        animation-name: moveTextToLeft;
+        animation-duration: 18s;
+        animation-delay: 20s;
+        animation-timing-function: linear;
+      }
+
+      .Moveimg {
+        position: absolute;
+        z-index: 1;
+        height: auto;
+        width: 2000px;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        left: 0;
+        top: 0;
+
+        animation-name: MoveimgLeft;
+        animation-duration: 10s;
+        animation-delay: 40s;
+        animation-timing-function: linear;
+      }
+
+      .Zoomimg {
+        position: absolute;
+        z-index: 1;
+        height: 110vh;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        left: 0;
+        top: 0;
+
+        animation-name: Zoomimg;
+        animation-duration: 10s;
+        animation-delay: 50s;
+        animation-timing-function: linear;
+      }
+
+      .Afterimg {
+        position: absolute;
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        left: 0;
+        top: 0;
+
+        animation-name: endimg;
+        animation-duration: 60s;
+        animation-delay: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
+
+      @keyframes fadeIntro {
+        0% {opacity:0;}
+        20% {transform: scale(1.2)}
+        50% {opacity: 1; transform: scale(1.5)}
+        100% {opacity:0;}
+      }
+ 
+      @keyframes fadeOut {
+        0% {opacity:1;}
+        100% {opacity:0;}
+      }
+
+
+      @keyframes fadeInOutText {
+        0% {opacity:0;}
+        50% {opacity: 1;}
+        100% {opacity:0;}
+      }
+      
+
+      @keyframes fadeOutText {
+        0% {opacity:1;}
+        50% {opacity: 0.5;}
+        100% {opacity:0;}
+      }
+   
+      @keyframes fadeFirstGif {
+        0% {opacity:0;}
+        10% { opacity: 1;}
+        90% {opacity: 0.9;}
+        100% {opacity:0;}
+      }
+
+      @keyframes fadeSecondGif {
+        0% {opacity:0;}
+        10% { opacity: 1;}
+        90% {opacity: 0.9;}
+        100% {opacity:0;}
+      }
+
+      @keyframes moveTextToLeft {
+        0% {opacity:1; left: 120%; -webkit-box-shadow: 7px 10px 14px 10px #000000; 
+          box-shadow: 7px 10px 14px 10px #000000; background-color: ghostwhite;}
+        99% {left: -100%; opacity: 1;}
+        100% {opacity:0;}
+      }
+
+      @keyframes MoveimgLeft {
+        0% {opacity:1;}
+        99% {left: -4%; opacity: 1;}
+        100% {opacity:0;}
+      }
+
+      @keyframes Zoomimg {
+        0% {opacity:1;}
+        20% {transform: scale(1.1); opacity:1;}
+        40% {transform: scale(1.3); opacity:1;}
+        60% {transform: scale(1.5); opacity:1;}
+        80% {transform: scale(1.6); opacity:0.7;}
+        90% {transform: scale(1.5); opacity: 0.4;}
+        100% {transform: scale(1.3); opacity:0;}
+      }
+
+      @keyframes endimg {
+        0% {opacity:1;}
+        20% {transform: scale(1.1)}
+        40% {transform: scale(1)}
+        60% {transform: scale(1.2)}
+        80% {transform: scale(1)}
+        100% {opacity:1;}
+      }

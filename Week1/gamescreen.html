@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Week1/css/animation.css">
+    <title id="Title"> </title>
+</head>
+<body>
+        <audio id="music" autoplay loop>
+                <source src="" type="audio/ogg">
+                <source src="../Week1/mp3file/Black Desert Online OST - Title Screen (Remaster).mp3" type="audio/mpeg">
+        </audio>
+
+        <div id="cf">
+            <img class="Introgif" src="../Week1/img/Blackspirit.gif">
+
+            <h1 class="WelcomeText" id="TRAVELER"></h1>
+
+            <h3 class="Text1">Your adventure is about to start!</h3>
+
+            <h3 class="Text2">Greetings Adventurers! We will be performing a scheduled maintenance for Black Desert Online on September 15, 2021 in order to improve our services and bring you the latest updates. * Please note that the maintenance scheduled for next week will be on September 23, 2021 (Thu).</h3>
+
+            
+            <img class="FirstGif" src="../Week1/img/bdologin.jpg">
+            <img class="SecondGif" src="../Week1/img/bdostart.jpg">
+            <img class="Moveimg" src="../Week1/img/move.jpg">
+            <img class="Zoomimg" src="../Week1/img/zoomout.jpg">
+
+            <img class="Afterimg" src="../Week1/img/blackdesertonlinenight.jpg">
+        </div>
+
+    <script>
+        document.getElementById("music").volume = 0.1;
+
+        const TRAVELER = localStorage.getItem('TRAVELER');
+
+        console.log(TRAVELER);
+
+        document.getElementById('Title').innerHTML = "Welcome " + TRAVELER;  
+        document.getElementById('TRAVELER').innerHTML = "Welcome " + TRAVELER;  
+    </script>
+</body>
+</html>
